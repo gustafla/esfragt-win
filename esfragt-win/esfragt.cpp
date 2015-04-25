@@ -21,7 +21,7 @@ Esfragt::Esfragt() {
         std::cin >> e;
         exit(40);
     }
-    if(shaderProgram.compProgram(SIMPLE_VS, fsTemp) == GL_FALSE) {
+    if(shaderProgram.compProgram(SIMPLE_VS, fsTemp.c_str()) == GL_FALSE) {
         char e;
         std::cin >> e;
         exit(1);
@@ -88,8 +88,7 @@ void Esfragt::draw() {
     shaderProgram.use();
     if (pp) {
         pp->bindFramebuffer();
-        if (Config::instance->clearPp)
-            glClear(GL_COLOR_BUFFER_BIT);
+        glClear(GL_COLOR_BUFFER_BIT);
     }
     glUniform1f(shaderProgram.getUfmHandle("iGlobalTime"), glfwGetTime());
 

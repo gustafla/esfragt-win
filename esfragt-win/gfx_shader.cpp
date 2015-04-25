@@ -36,7 +36,7 @@ GLuint GfxShader::compShader(GLenum type, const char* src)
     if (shader == 0)
         return 0;
 
-    glShaderSource(shader, 1, &src, NULL);
+    glShaderSource(shader, 1, &src, NULL); //
     glCompileShader(shader);
 
     glGetShaderiv(shader, GL_COMPILE_STATUS, &compiled);

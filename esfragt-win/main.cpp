@@ -30,6 +30,8 @@ int main (int argc, char* argv[]) {
         return -2;
     }
     glfwMakeContextCurrent(window);
+    if (config->swInterval0)
+        glfwSwapInterval(0);
     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_HIDDEN);
     glfwSetKeyCallback(window, key_callback);
 

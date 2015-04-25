@@ -20,8 +20,8 @@ class Config {
         bool devmode;
         bool prepend;
         bool fpsCounter;
-        bool clearPp;
         bool fullScreen;
+        bool swInterval0;
         unsigned short fpsIn;
 };
 

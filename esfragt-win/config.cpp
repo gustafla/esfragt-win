@@ -16,7 +16,7 @@ devmode(false),
 prepend(false),
 fpsCounter(false),
 fullScreen(false),
-clearPp(true),
+swInterval0(false),
 ppName(""),
 fpsIn(100),
 imgs(0)
@@ -118,13 +118,13 @@ imgs(0)
                                                         }
                                                         ppName=argv[n];
                                                     }
-                                                        else if (!strcmp(argv[n], "-m"))
+                                                        else if (!strcmp(argv[n], "--fullscreen"))
                                                         {
-                                                            clearPp = false;
+                                                            fullScreen = true;
                                                         }
-                                                            else if (!strcmp(argv[n], "--fullscreen"))
+                                                            else if (!strcmp(argv[n], "-v"))
                                                             {
-                                                                fullScreen = true;
+                                                                swInterval0 = true;
                                                             }
                                                                 else if (!gotName)
                                                                 {
