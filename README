@@ -1,0 +1,8 @@
+Esfragt <https://github.com/luutifa/esfragt> port for Windows, uses GLFW and GLEW, configure those manually when building.  
+Meant for Visual C++ 2010 (express), but probably pretty easy to build with anything else if you know your stuff.  
+For an easy prebuilt package, just download the x86 zip from the root.
+
+Again, no proper licensing but I don't care what you do with the sources.  
+
+Check --help (or text.cpp) for additional help.  
+Generally this works fine from drag&drop or file association.  
