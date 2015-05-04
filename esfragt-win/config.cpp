@@ -9,12 +9,12 @@ Config* Config::instance = NULL;
 
 Config::Config(int argc, char* argv[]):
 fsName("esfragt.frag"),
-w(1280),
-h(720),
+w(640),
+h(480),
 stretch(1),
 devmode(false),
 prepend(false),
-fpsCounter(false),
+fpsCounter(true),
 fullScreen(false),
 swInterval0(false),
 ppName(""),
@@ -69,77 +69,83 @@ imgs(0)
                                     }
                                 }
                             }
-                                else if (!strcmp(argv[n], "-d"))
+                                else if (!strcmp(argv[n], "--nf"))
                                 {
-                                    devmode = true;
+                                    fpsCounter = false;
                                 }
-                                    else if (!strcmp(argv[n], "-u"))
+                                    else if (!strcmp(argv[n], "-d"))
                                     {
-                                        prepend = true;
+                                        devmode = true;
                                     }
-                                        else if (!strcmp(argv[n], "-c"))
+                                        else if (!strcmp(argv[n], "-u"))
                                         {
-                                            n++;
-                                            checkValueParamf(n, argc, argv);
-                                            stretch = atof(argv[n]);
-                                            if (stretch < 1)
-                                            {
-                                                std::cout << ARGERR;
-                                                exit(4);
-                                            }
+                                            prepend = true;
                                         }
-                                            else if (!strcmp(argv[n], "-i"))
+                                            else if (!strcmp(argv[n], "-c"))
                                             {
-                                                if (imgs >= 8)
-                                                {
-                                                    std::cout << "Too many images\n" << ARGERR;
-                                                    exit(6);
-                                                }
                                                 n++;
-                                                if (n==argc)
+                                                checkValueParamf(n, argc, argv);
+                                                stretch = atof(argv[n]);
+                                                if (stretch < 1)
                                                 {
                                                     std::cout << ARGERR;
-                                                    exit(20);
+                                                    exit(4);
                                                 }
-                                                inames[imgs]=argv[n];
-                                                imgs++;
                                             }
-                                                else if (!strcmp(argv[n], "-a"))
+                                                else if (!strcmp(argv[n], "-i"))
                                                 {
-                                                    useAuto = true;
-                                                }
-                                                    else if (!strcmp(argv[n], "-p"))
+                                                    if (imgs >= 8)
                                                     {
-                                                        n++;
-                                                        if (n==argc)
-                                                        {
-                                                            std::cout << ARGERR;
-                                                            exit(23);
-                                                        }
-                                                        ppName=argv[n];
+                                                        std::cout << "Too many images\n" << ARGERR;
+                                                        exit(6);
                                                     }
-                                                        else if (!strcmp(argv[n], "--fullscreen"))
+                                                    n++;
+                                                    if (n==argc)
+                                                    {
+                                                        std::cout << ARGERR;
+                                                        exit(20);
+                                                    }
+                                                    inames[imgs]=argv[n];
+                                                    imgs++;
+                                                }
+                                                    else if (!strcmp(argv[n], "-a"))
+                                                    {
+                                                        useAuto = true;
+                                                    }
+                                                        else if (!strcmp(argv[n], "-p"))
                                                         {
-                                                            fullScreen = true;
-                                                        }
-                                                            else if (!strcmp(argv[n], "-v"))
+                                                            n++;
+                                                            if (n==argc)
                                                             {
-                                                                swInterval0 = true;
+                                                                std::cout << ARGERR;
+                                                                exit(23);
                                                             }
-                                                                else if (!gotName)
+                                                            ppName=argv[n];
+                                                        }
+                                                            else if (!strcmp(argv[n], "--fullscreen"))
+                                                            {
+                                                                fullScreen = true;
+                                                            }
+                                                                else if (!strcmp(argv[n], "-v"))
                                                                 {
-                                                                    fsName = argv[n];
-                                                                    gotName = true;
+                                                                    swInterval0 = true;
                                                                 }
-                                                                    else
+                                                                    else if (!gotName)
                                                                     {
-                                                                        std::cout << "Unexpected parameter " << argv[n] << std::endl;
-                                                                        std::cout << ARGERR;
-                                                                        exit(5);
+                                                                        fsName = argv[n];
+                                                                        gotName = true;
                                                                     }
+                                                                        else
+                                                                        {
+                                                                            std::cout << "Unexpected parameter " << argv[n] << std::endl;
+                                                                            std::cout << ARGERR;
+                                                                            exit(5);
+                                                                        }
     }
     if (useAuto) {
-        glfwGetMonitorPhysicalSize(glfwGetPrimaryMonitor(), &w, &h);
+        const GLFWvidmode* vm = glfwGetVideoMode(glfwGetPrimaryMonitor());
+        w = vm->width;
+        h = vm->height;
     }
 
     h /= stretch;
