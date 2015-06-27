@@ -24,7 +24,7 @@ int main (int argc, char* argv[]) {
     GLFWmonitor* primary = NULL;
     if (config->fullScreen)
         primary = glfwGetPrimaryMonitor();
-    GLFWwindow* window = glfwCreateWindow(config->w, config->h, "Esfragt4windows 1.0", primary, NULL);
+    GLFWwindow* window = glfwCreateWindow(config->w, config->h, "Esfragt4windows 1.0.1", primary, NULL);
     if (!window) {
         glfwTerminate();
         return -2;

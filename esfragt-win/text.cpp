@@ -12,7 +12,7 @@ const std::string UNIFORMS = "uniform vec2 iResolution; "
                              "uniform sampler2D iChannel6; "
                              "uniform sampler2D iChannel7; ";
 
-const std::string VERSION = "GL ES Fragment Shader Thingy for Windows - esfragt4win 1.0\n";
+const std::string VERSION = "GL ES Fragment Shader Thingy for Windows - esfragt4win 1.0.1\n";
 
 const std::string ARGERR = "Go fix your parameters.\n"
                            "Try 'esfragt --help' for more information.\n";
