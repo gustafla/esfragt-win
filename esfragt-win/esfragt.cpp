@@ -102,7 +102,7 @@ void Esfragt::draw() {
     glDrawArrays(GL_TRIANGLES, 0, 3*2);
     if (pp) {
         gfxBindFB0();
-		glClear(GL_COLOR_BUFFER_BIT);
+	    glClear(GL_COLOR_BUFFER_BIT);
         pp->draw();
     }
 }
