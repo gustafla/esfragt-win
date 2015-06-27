@@ -1,34 +1,13 @@
-﻿Build started 4.5.2015 19:35:23.
+﻿Build started 28.6.2015 1:13:13.
      1>Project "C:\Users\luutifa\Documents\dev\esfragt-win\esfragt-win\esfragt-win.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
-         Touching "Release\esfragt-win.unsuccessfulbuild".
+         Creating "Release\esfragt-win.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Users\luutifa\libs\glfw-3.1.1.bin.WIN32\include" /I"C:\Users\luutifa\libs\glew-1.12.0\include" /Zi /nologo /W3 /WX- /O2 /Ob2 /Oi /Ot /Oy /GL /D _MBCS /GF- /Gm- /EHsc /MD /GS- /Gy /fp:precise /fp:except- /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt config.cpp esfragt.cpp gfx.cpp gfx_postprocessor.cpp gfx_shader.cpp gfx_texture_2D.cpp main.cpp text.cpp tga_file.cpp util.cpp
-         config.cpp
-     1>config.cpp(88): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>config.cpp(151): warning C4244: '/=' : conversion from 'float' to 'int', possible loss of data
-     1>config.cpp(152): warning C4244: '/=' : conversion from 'float' to 'int', possible loss of data
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Users\luutifa\libs\glfw-3.1.1.bin.WIN32\include" /I"C:\Users\luutifa\libs\glew-1.12.0\include" /Zi /nologo /W3 /WX- /O2 /Ob2 /Oi /Ot /Oy /GL /D _MBCS /GF- /Gm- /EHsc /MD /GS- /Gy /fp:precise /fp:except- /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt esfragt.cpp
          esfragt.cpp
      1>esfragt.cpp(71): warning C4244: '=' : conversion from 'int' to 'GLfloat', possible loss of data
      1>esfragt.cpp(72): warning C4244: '=' : conversion from 'int' to 'GLfloat', possible loss of data
      1>esfragt.cpp(93): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
-         gfx.cpp
-         gfx_postprocessor.cpp
-     1>gfx_postprocessor.cpp(24): warning C4244: 'initializing' : conversion from 'unsigned int' to 'GLfloat', possible loss of data
-     1>gfx_postprocessor.cpp(26): warning C4244: 'initializing' : conversion from 'unsigned int' to 'GLfloat', possible loss of data
-     1>gfx_postprocessor.cpp(36): warning C4244: 'argument' : conversion from 'GLfloat' to 'unsigned int', possible loss of data
-     1>gfx_postprocessor.cpp(36): warning C4244: 'argument' : conversion from 'GLfloat' to 'unsigned int', possible loss of data
-     1>gfx_postprocessor.cpp(43): warning C4244: 'argument' : conversion from 'GLfloat' to 'GLsizei', possible loss of data
-     1>gfx_postprocessor.cpp(43): warning C4244: 'argument' : conversion from 'GLfloat' to 'GLsizei', possible loss of data
-     1>gfx_postprocessor.cpp(68): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
-         gfx_shader.cpp
-         gfx_texture_2D.cpp
-         main.cpp
-     1>main.cpp(43): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
-     1>main.cpp(56): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-         text.cpp
-         tga_file.cpp
-         util.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\luutifa\Documents\dev\esfragt-win\Release\esfragt-win.exe" /NOLOGO /LIBPATH:"C:\Users\luutifa\libs\glew-1.12.0\lib\Release\Win32" /LIBPATH:"C:\Users\luutifa\libs\glfw-3.1.1.bin.WIN32\lib-vc2010" opengl32.lib glu32.lib glew32s.lib glfw3.lib winmm.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST:NO /PDB:"C:\Users\luutifa\Documents\dev\esfragt-win\Release\esfragt-win.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\luutifa\Documents\dev\esfragt-win\Release\esfragt-win.lib" /MACHINE:X86 Release\config.obj
          Release\esfragt.obj
@@ -51,4 +30,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:11.27
+Time Elapsed 00:00:04.90
